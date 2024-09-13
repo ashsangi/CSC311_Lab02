@@ -5,19 +5,18 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="284.0" prefWidth="324.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="284.0" prefWidth="324.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csc311_lab02.HelloController">
    <children>
       <Label layoutX="23.0" layoutY="43.0" text="Annual Interest Rate:" />
-      <TextField layoutX="162.0" layoutY="39.0" />
+      <TextField fx:id="annualInterestRate" layoutX="162.0" layoutY="39.0" />
       <Label layoutX="23.0" layoutY="89.0" text="Number of Years:" />
-      <TextField layoutX="162.0" layoutY="85.0" />
+      <TextField fx:id="numberOfYears" layoutX="162.0" layoutY="85.0" />
       <Label layoutX="23.0" layoutY="133.0" text="Loan Amount:" />
       <Label layoutX="23.0" layoutY="179.0" text="Monthly Payment:" />
       <Label layoutX="23.0" layoutY="221.0" text="Total Payment:" />
-      <TextField layoutX="162.0" layoutY="129.0" />
-      <TextField layoutX="162.0" layoutY="175.0" />
-      <TextField layoutX="162.0" layoutY="217.0" />
-      <Button layoutX="247.0" layoutY="247.0" mnemonicParsing="false" style="-fx-border-color: #9fc5e8;" text="Calculate" />
+      <TextField fx:id="loanAmount" layoutX="162.0" layoutY="129.0" />
+      <TextField fx:id="monthlyPayment" layoutX="162.0" layoutY="175.0" />
+      <TextField fx:id="totalPayment" layoutX="162.0" layoutY="217.0" />
+      <Button fx:id="calculateButton" layoutX="247.0" layoutY="247.0" mnemonicParsing="false" onAction="#calculate" style="-fx-border-color: #9fc5e8;" text="Calculate" />
    </children>
 </AnchorPane>
