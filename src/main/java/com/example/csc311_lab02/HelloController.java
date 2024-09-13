@@ -36,7 +36,6 @@ public class HelloController {
         denominator = 1-Math.pow(1+monthlyInterestRate,-totalMonths);
         monthly = numerator/denominator;
         total = monthly * totalMonths;
-        System.out.println(monthly);
         monthlyPayment.setText(String.format("$%.2f",monthly));
         totalPayment.setText(String.format("$%.2f",total));
     }
