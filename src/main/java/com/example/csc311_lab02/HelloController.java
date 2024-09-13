@@ -21,12 +21,24 @@ public class HelloController {
     double loan;
     double monthly;
     double total;
+    double numerator;
+    double denominator;
+    int totalMonths;
+    double monthlyInterestRate;
 
     public void calculate(ActionEvent event){
         years = Integer.parseInt(numberOfYears.getText());
-        interest = Double.parseDouble(annualInterestRate.getText());
+        interest = Double.parseDouble(annualInterestRate.getText()) / 100;
         loan = Double.parseDouble(loanAmount.getText());
-
+        monthlyInterestRate = interest/12;
+        totalMonths = years * 12;
+        numerator = loan * monthlyInterestRate;
+        denominator = 1-Math.pow(1+monthlyInterestRate,-totalMonths);
+        monthly = numerator/denominator;
+        total = monthly * totalMonths;
+        System.out.println(monthly);
+        monthlyPayment.setText(String.format("$%.2f",monthly));
+        totalPayment.setText(String.format("$%.2f",total));
     }
 
 
